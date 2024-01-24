@@ -4,12 +4,9 @@ export const TodoForm = ({addTodo}) => {
     const [value, setValue] = useState('');
 
     const handleSubmit = (e) => {
-      // prevent default action
         e.preventDefault();
         if (value) {
-          // add todo
           addTodo(value);
-          // clear form after submission
           setValue('');
         }
       };
